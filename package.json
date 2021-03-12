@@ -1,0 +1,37 @@
+{
+  "name": "pangaea-pub-sub",
+  "version": "1.0.0",
+  "description": "Publisher subscriber server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./dist && tsc -b",
+    "start": "npm run build && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genbliz/pangaea-pub-sub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genbliz/pangaea-pub-sub/issues"
+  },
+  "homepage": "https://github.com/genbliz/pangaea-pub-sub#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.33",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.3"
+  }
+}
