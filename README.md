@@ -47,15 +47,16 @@ npm run start
 ```bash
 POST /subscribe/{topic}
 {
-    "url": "http://127.0.0.1:9001/sub01"
+    url: string
 }
 ```
-OR
+
+Full example using one of the available subscriber endpoints:
 
 ```bash
-POST /subscribe/{topic}
+POST http://127.0.0.1:8001/subscribe/topic1
 {
-    "url": "http://127.0.0.1:9001/sub02"
+    "url": "http://127.0.0.1:9001/sub01"
 }
 ```
 
@@ -63,6 +64,15 @@ POST /subscribe/{topic}
 
 ```bash
 POST /publish/{topic}
+{
+    [key: string]: any
+}
+```
+
+Full example
+
+```bash
+POST http://127.0.0.1:8001/publish/topic1
 {
     "msg": "Test notification"
 }
