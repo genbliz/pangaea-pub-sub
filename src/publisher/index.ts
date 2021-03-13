@@ -1,11 +1,11 @@
 import http from "http";
 import dotenv from "dotenv";
 dotenv.config();
-import App from "./publisher";
+import app from "./publisher";
 // --------------------------------------------------------
 const port = process.env.PUBLISHER_PORT || 8001;
 
-const server = http.createServer(App);
+const server = http.createServer(app);
 
 process.on("unhandledRejection", (reason, promise) => {
   console.log("@process unhandledRejection");

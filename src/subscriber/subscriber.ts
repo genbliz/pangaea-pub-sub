@@ -8,14 +8,14 @@ app.use(cors());
 app.use(helmet());
 app.use(express.json());
 
-app.post("/test1", (req, res) => {
+app.post("/sub01", (req, res) => {
   console.log(JSON.stringify(req.body, null, 2));
-  res.json("Recieved");
+  res.json("Ok");
 });
 
-app.post("/test2", (req, res) => {
+app.post("/sub02", (req, res) => {
   console.log(JSON.stringify(req.body, null, 2));
-  res.json("Recieved");
+  res.json("Ok");
 });
 
 app.use((req, res, next) => {

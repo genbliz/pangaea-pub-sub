@@ -12,21 +12,9 @@ app.use(express.json());
 const subscriptions = new Map<string, string[]>();
 const subscriberPort = process.env.SUBSCRIBER_PORT || 9001;
 
-export enum StatusCode {
-  OK_200 = 200,
-  Accepted_202 = 202,
-  Created_201 = 201,
-  InternalServerError_500 = 500,
-  NotFound_404 = 404,
-  Forbidden_403 = 403,
-  Unauthorized_401 = 401,
-  BadRequest_400 = 400,
-  MethodNotAllowed_405 = 405,
-}
-
 const subscribersUrls = [
-  `http://127.0.0.1:${subscriberPort}/test1`,
-  `http://127.0.0.1:${subscriberPort}/test2`,
+  `http://127.0.0.1:${subscriberPort}/sub01`,
+  `http://127.0.0.1:${subscriberPort}/sub02`,
 ];
 
 async function publishToSubscribers({
