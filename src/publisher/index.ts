@@ -1,7 +1,7 @@
 import http from "http";
 import dotenv from "dotenv";
 dotenv.config();
-import app from "./publisher";
+import app from "./app";
 // --------------------------------------------------------
 const port = process.env.PUBLISHER_PORT || 8001;
 

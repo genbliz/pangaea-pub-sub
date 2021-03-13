@@ -1,7 +1,7 @@
 import http from "http";
 import dotenv from "dotenv";
 dotenv.config();
-import app from "./subscriber";
+import app from "./app";
 // --------------------------------------------------------
 const port = process.env.SUBSCRIBER_PORT || 9001;
 

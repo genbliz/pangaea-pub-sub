@@ -28,7 +28,6 @@ async function publishToSubscribers({
 }) {
   try {
     const body = { topic, data };
-    // console.log({ body, url });
     await axios.post(url, body, {
       headers: {
         "Content-Type": "application/json;charset=UTF-8",
@@ -36,6 +35,7 @@ async function publishToSubscribers({
     });
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
 
