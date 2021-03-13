@@ -1,24 +1,18 @@
+import { envConfig, subscribersUrls } from "./../config";
 import supertest from "supertest";
 import { setup as setupDevServer } from "jest-dev-server";
 import { teardown as teardownDevServer } from "jest-dev-server";
 import app from "../publisher/app";
 const request = supertest(app);
 
-const subscriberPort = process.env.SUBSCRIBER_PORT || 9001;
-
-const subscribersUrls = [
-  `http://127.0.0.1:${subscriberPort}/sub01`,
-  `http://127.0.0.1:${subscriberPort}/sub02`,
-];
-
 describe("Publisher", () => {
   beforeAll(async () => {
-    jest.setTimeout(30000);
+    jest.setTimeout(20000);
 
     await setupDevServer({
       command: "npm run start:test",
-      launchTimeout: 30000,
-      port: Number(subscriberPort),
+      launchTimeout: 20000,
+      port: envConfig.SUBSCRIBER_PORT,
     });
   });
 

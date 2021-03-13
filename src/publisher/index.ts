@@ -1,9 +1,10 @@
+import { envConfig } from "./../config";
 import http from "http";
 import dotenv from "dotenv";
 dotenv.config();
 import app from "./app";
 // --------------------------------------------------------
-const port = process.env.PUBLISHER_PORT || 8001;
+const port = envConfig.PUBLISHER_PORT;
 
 const server = http.createServer(app);
 

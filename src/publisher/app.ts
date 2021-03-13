@@ -1,3 +1,4 @@
+import { subscribersUrls } from "./../config";
 import cors from "cors";
 import express from "express";
 import helmet from "helmet";
@@ -10,12 +11,6 @@ app.use(helmet());
 app.use(express.json());
 
 const subscriptions = new Map<string, string[]>();
-const subscriberPort = process.env.SUBSCRIBER_PORT || 9001;
-
-const subscribersUrls = [
-  `http://127.0.0.1:${subscriberPort}/sub01`,
-  `http://127.0.0.1:${subscriberPort}/sub02`,
-];
 
 async function publishToSubscribers({
   url,
