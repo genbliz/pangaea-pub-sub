@@ -1,7 +1,7 @@
 {
   "name": "pangaea-pub-sub",
   "version": "1.0.0",
-  "description": "Publisher subscriber server",
+  "description": "Publisher subscriber HTTP notification system",
   "main": "index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc -b",
