@@ -51,12 +51,19 @@ POST /subscribe/{topic}
 }
 ```
 
-Full example using one of the available subscriber endpoints:
+Full examples. Subscribe to topic1, using the available subscriber endpoints:
 
 ```bash
 POST http://127.0.0.1:8001/subscribe/topic1
 {
     "url": "http://127.0.0.1:9001/sub01"
+}
+```
+
+```bash
+POST http://127.0.0.1:8001/subscribe/topic1
+{
+    "url": "http://127.0.0.1:9001/sub02"
 }
 ```
 
